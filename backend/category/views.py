@@ -11,6 +11,6 @@ class CategoryViewSet(ModelViewSet):
     serializer_class = CategorySerializer
     permission_classes = [AllowAny]
 
-    @csrf_exempt  # Vô hiệu hóa CSRF cho ViewSet này
+    @csrf_exempt
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)

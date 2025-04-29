@@ -14,6 +14,7 @@ urlpatterns = [
     # path('auth/login/' ... TokenObtainPairView ở urls.py gốc),
     # path('auth/refresh/' ... TokenRefreshView ở urls.py gốc),
     path('api/category/', include('category.urls')),
+    path('api/movie/', include('movie.urls')),
 
     path('api/', include('users.urls')),
 ]

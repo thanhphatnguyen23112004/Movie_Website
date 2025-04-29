@@ -1,28 +1,27 @@
 from rest_framework import serializers
-# from django.contrib.auth import get_user_model # Cách lấy Custom User Model an toàn
-from .models import CustomUser as User # Nếu dùng CustomUser và đã set AUTH_USER_MODEL
+# from django.contrib.auth import get_user_model
+from .models import CustomUser as User
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        # model = get_user_model() # Cách tốt hơn nếu dùng get_user_model()
-        model = User # Sử dụng CustomUser bạn đã tạo
-        fields = ('id', 'username', 'email', 'first_name', 'last_name', 'date_joined') # Các trường muốn hiển thị
-        read_only_fields = ('id', 'date_joined') # Các trường chỉ đọc
+        # model = get_user_model()
+        model = User
+        fields = ('id', 'username', 'email', 'first_name', 'last_name', 'date_joined')
+        read_only_fields = ('id', 'date_joined')
 
 class RegisterSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True) # Chỉ cho phép ghi, không đọc
+    password = serializers.CharField(write_only=True) 
 
     class Meta:
         # model = get_user_model()
         model = User
-        fields = ('username', 'email', 'password', 'first_name', 'last_name') # Các trường cho form đăng ký
+        fields = ('username', 'email', 'password', 'first_name', 'last_name')
 
     def create(self, validated_data):
-        # Ghi đè phương thức create để hash mật khẩu trước khi lưu
         user = User.objects.create_user(
             username=validated_data['username'],
             password=validated_data['password'],
-            email=validated_data.get('email', ''), # email là tùy chọn
+            email=validated_data.get('email', ''),
             first_name=validated_data.get('first_name', ''),
             last_name=validated_data.get('last_name', '')
         )
