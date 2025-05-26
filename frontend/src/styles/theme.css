@@ -1,0 +1,27 @@
+:root {
+  --text-primary: #222222;          /* chữ chính màu xám rất đậm */
+  --theme-color-primary: #555555;   /* màu chủ đạo xám đậm */
+  --theme-color-secondary: #888888; /* màu phụ xám vừa */
+  --bg-primary: #ffffff;            /* nền sáng trắng */
+  --bg-secondary: #F9F9F9;          /* nền phụ trắng xám nhẹ */
+  --accent-primary: #444444;        /* màu nhấn tối xám */
+  --border: #CCCCCC80;              /* viền xám nhạt, 50% opacity */
+  --shadow: rgba(0, 0, 0, 0.1);     /* bóng nhẹ */
+  --completed-bg: #E5E5E5;          /* nền trạng thái hoàn thành xám sáng */
+  --deny-bg: #D32F2F;               /* màu đỏ đậm báo lỗi */
+  --time-wrapper: rgba(0, 0, 0, 0.05); /* nền nhẹ cho time */
+}
+
+.dark {
+  --text-primary: #E0E0E0;          /* chữ chính xám sáng */
+  --theme-color-primary: #BBBBBB;   /* màu chủ đạo xám sáng */
+  --theme-color-secondary: #888888; /* màu phụ xám vừa */
+  --bg-primary: #121212;            /* nền tối gần đen */
+  --bg-secondary: #1E1E1E;          /* nền phụ tối xám */
+  --accent-primary: #999999;        /* màu nhấn xám sáng */
+  --border: #FFFFFF33;              /* viền trắng mờ */
+  --shadow: rgba(255, 255, 255, 0.15); /* bóng sáng nhẹ */
+  --completed-bg: #333333;          /* nền trạng thái hoàn thành tối */
+  --deny-bg: #EF5350;               /* đỏ sáng hơn báo lỗi */
+  --time-wrapper: rgba(255, 255, 255, 0.05); /* nền nhẹ cho time */
+}
