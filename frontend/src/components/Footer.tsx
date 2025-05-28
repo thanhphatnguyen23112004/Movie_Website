@@ -11,31 +11,34 @@ export default function Footer() {
                     {/*Information*/}
                     <div className="flex flex-col gap-5 md:col-span-3 col-span-1 ">
                         <h3 className="text-3xl font-bold text-accent-text">Movie Website</h3>
-                        <p> <span className="text-accent-text font-semibold">Movie Web - </span>Trang xem phim Online với giao diện mới được bố trí và thiết kế thân thiện với người dùng. Nguồn phim được tổng hợp từ các website lớn với đa dạng các đầu phim và thể loại vô cùng phong phú.</p>
+                        <p> <span className="text-accent-text font-semibold">Movie Web - </span>An online movie streaming site featuring a new, user-friendly interface. The movie sources are aggregated from major websites, offering a wide variety of titles and diverse genres.</p>
 
                     </div>
 
                     {/*Quick Links*/}
-                    <div className="md:col-span-1 col-span-1">
-                        <h3 className="text-md text-footer-heading font-semibold mt-3 mb-5">Quick Links</h3>
-                        <ul className="space-y-2 [&>li>a:hover]:[color:var(--text-primary)] [&>li>a]:transition-all">
-                            <li><Link to='/' className="text-md font-semibold text-accent-text">Home</Link> </li>
-                            <li><Link to='/' className="text-md font-semibold text-accent-text">About</Link> </li>
-                            <li><Link to='/' className="text-md font-semibold text-accent-text">Categories</Link> </li>
-                            <li><Link to='/' className="text-md font-semibold text-accent-text">Contact</Link> </li>
-                        </ul>
+                    <div className="md:col-span-2 col-span-1 grid grid-cols-2 gap-8">
+                        <div className="md:col-span-1 col-span-1">
+                            <h3 className="text-md text-footer-heading font-semibold mt-3 mb-5">Quick Links</h3>
+                            <ul className="space-y-2 [&>li>a:hover]:[color:var(--text-primary)] [&>li>a]:transition-all">
+                                <li><Link to='/' className="text-md font-semibold text-accent-text">Home</Link> </li>
+                                <li><Link to='/' className="text-md font-semibold text-accent-text">About</Link> </li>
+                                <li><Link to='/' className="text-md font-semibold text-accent-text">Categories</Link> </li>
+                                <li><Link to='/' className="text-md font-semibold text-accent-text">Contact</Link> </li>
+                            </ul>
+                        </div>
+
+                        {/*Categories*/}
+                        <div className="md:col-span-1 col-span-1">
+                            <h3 className="text-md text-footer-heading font-semibold mt-3 mb-5">Categories</h3>
+                            <ul className="space-y-2 [&>li>a:hover]:[color:var(--text-primary)] [&>li>a]:transition-all ">
+                                <li><Link to='/' className="text-md font-semibold text-accent-text">Comedy</Link> </li>
+                                <li><Link to='/' className="text-md font-semibold text-accent-text">Action</Link> </li>
+                                <li><Link to='/' className="text-md font-semibold text-accent-text">Horror</Link> </li>
+                                <li><Link to='/' className="text-md font-semibold text-accent-text">SciFilm</Link> </li>
+                            </ul>
+                        </div>
                     </div>
 
-                    {/*Categories*/}
-                    <div className="md:col-span-1 col-span-1">
-                        <h3 className="text-md text-footer-heading font-semibold mt-3 mb-5">Categories</h3>
-                        <ul className="space-y-2 [&>li>a:hover]:[color:var(--text-primary)] [&>li>a]:transition-all ">
-                            <li><Link to='/' className="text-md font-semibold text-accent-text">Comedy</Link> </li>
-                            <li><Link to='/' className="text-md font-semibold text-accent-text">Action</Link> </li>
-                            <li><Link to='/' className="text-md font-semibold text-accent-text">Horror</Link> </li>
-                            <li><Link to='/' className="text-md font-semibold text-accent-text">SciFilm</Link> </li>
-                        </ul>
-                    </div>
 
                     {/*Contact*/}
                     <div className="md:col-span-2 col-span-1 ">
@@ -43,11 +46,11 @@ export default function Footer() {
                         <form className="flex flex-col gap-2">
                             <input type="email"
                                 placeholder="Enter your Email"
-                                className="px-3 py-2 rounded text-text border border-border focus:outline-none focus:ring-1 focus:ring-accent"
+                                className="px-3 py-2 rounded text-black border border-border focus:outline-none focus:ring-1 focus:ring-accent"
                             />
                             <button
                                 type="submit"
-                                className="bg-accent text-footer-bg font-semibold rounded px-3 py-2 mt-2 hover:opacity-80 transition-all"
+                                className="bg-accent text-white font-semibold rounded px-3 py-2 mt-2 hover:opacity-80 transition-all"
                             >
                                 Send
                             </button>
@@ -73,7 +76,7 @@ export default function Footer() {
             {/*Copyright*/}
             <div className="bg-footer-bg-secondary">
                 <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8 " >
-                    <a href="https://github.com/AriesN2503" className="block text-xs font-semibold text-center hover:text-accent transition-all cursor-pointer">© 2025 by Aries</a>
+                    <a href="https://github.com/AriesN2503" className="block text-xs font-semibold text-center text-text-primary hover:text-accent transition-all cursor-pointer">© 2025 by Aries</a>
                 </div>
             </div>
         </footer>

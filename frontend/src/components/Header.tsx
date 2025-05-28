@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ModeToggle } from "./mode-toggle";
+import { Button } from "./ui/button";
 
 export default function Header() {
     return (
@@ -27,6 +28,19 @@ export default function Header() {
                         </li>
                     </ul>
                 </nav>
+
+
+                {/*Theme Switch & Login*/}
+                <div className="flex items-end gap-4">
+                    <ModeToggle></ModeToggle>
+
+                    <Link to='/login'>
+                        <Button className="bg-accent text-white">
+                                Login
+                        </Button>
+                    </Link>
+                </div>
+
             </div>
         </header>
     )
