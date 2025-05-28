@@ -12,7 +12,7 @@ function App() {
           <Routes>
             {publicRoutes.map((route, index) => {
               const Page = route.page
-
+              if(!route.path) route.path = '/notFound'
               return (
                 <Route key={index} path={route.path} element={<DefaultLayout> <Page /></DefaultLayout>} />
               )
