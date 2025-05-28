@@ -1,27 +1,65 @@
 :root {
-  --text-primary: #222222;          /* chữ chính màu xám rất đậm */
-  --theme-color-primary: #555555;   /* màu chủ đạo xám đậm */
-  --theme-color-secondary: #888888; /* màu phụ xám vừa */
-  --bg-primary: #ffffff;            /* nền sáng trắng */
-  --bg-secondary: #F9F9F9;          /* nền phụ trắng xám nhẹ */
-  --accent-primary: #444444;        /* màu nhấn tối xám */
-  --border: #CCCCCC80;              /* viền xám nhạt, 50% opacity */
-  --shadow: rgba(0, 0, 0, 0.1);     /* bóng nhẹ */
-  --completed-bg: #E5E5E5;          /* nền trạng thái hoàn thành xám sáng */
-  --deny-bg: #D32F2F;               /* màu đỏ đậm báo lỗi */
-  --time-wrapper: rgba(0, 0, 0, 0.05); /* nền nhẹ cho time */
+  /* Base Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-muted: #f3f4f6;
+
+  /* Texts */
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+
+  /* Accent (Light Blue) */
+  --accent-primary: #00b1f7;
+  --accent-text: #00b1f7;
+
+  /* Header */
+  --header-bg: #ffffff;
+  --header-text: #1f2937;
+  --header-border: #e5e7eb;
+
+  /* Footer */
+  --footer-bg: #f3f4f6;
+  --footer-bg-secondary: #edeef1;
+  --footer-text: #4b5563;
+  --footer-heading: #1f2937;
+  --footer-link: var(--accent-text);
+
+  /* Border & Shadow */
+  --border: #e5e7eb;
+  --shadow: rgba(0, 0, 0, 0.05);
+
+  /* States */
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --success: #10b981;
 }
 
 .dark {
-  --text-primary: #E0E0E0;          /* chữ chính xám sáng */
-  --theme-color-primary: #BBBBBB;   /* màu chủ đạo xám sáng */
-  --theme-color-secondary: #888888; /* màu phụ xám vừa */
-  --bg-primary: #121212;            /* nền tối gần đen */
-  --bg-secondary: #1E1E1E;          /* nền phụ tối xám */
-  --accent-primary: #999999;        /* màu nhấn xám sáng */
-  --border: #FFFFFF33;              /* viền trắng mờ */
-  --shadow: rgba(255, 255, 255, 0.15); /* bóng sáng nhẹ */
-  --completed-bg: #333333;          /* nền trạng thái hoàn thành tối */
-  --deny-bg: #EF5350;               /* đỏ sáng hơn báo lỗi */
-  --time-wrapper: rgba(255, 255, 255, 0.05); /* nền nhẹ cho time */
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-muted: #2c2c2c;
+
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+
+  --accent-primary: #00b1f7;
+  --accent-text: #00b1f7;
+
+  --header-bg: #1a1a1a;
+  --header-text: #f3f4f6;
+  --header-border: #2c2c2c;
+
+  --footer-bg: #181818;
+  --footer-text: #d1d5db;
+  --footer-heading: #ffffff;
+  --footer-link: var(--accent-text);
+
+  --border: #2c2c2c;
+  --shadow: rgba(255, 255, 255, 0.05);
+
+  --error: #f87171;
+  --warning: #fbbf24;
+  --success: #34d399;
 }

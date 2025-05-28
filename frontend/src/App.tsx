@@ -1,10 +1,26 @@
-import Footer from './components/Footer/Footer'
+import { ThemeProvider } from "@/components/theme-provider"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { publicRoutes } from "./routes"
+import DefaultLayout from "./layouts/DefaultLayout"
 
 function App() {
 
   return (
     <>
-      <Footer></Footer>
+      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+        <BrowserRouter>
+          <Routes>
+            {publicRoutes.map((route, index) => {
+              const Page = route.page
+
+              return (
+                <Route key={index} path={route.path} element={<DefaultLayout> <Page /></DefaultLayout>} />
+              )
+            })}
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
+
     </>
   )
 }

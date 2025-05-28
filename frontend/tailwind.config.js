@@ -16,30 +16,41 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			colors: {
-				background: 'var(--bg-primary)',
-				foreground: 'var(--text-primary)',
-				'background-secondary': 'var(--bg-secondary)',
-				text: 'var(--text-primary)',
-				primary: {
-					DEFAULT: 'var(--theme-color-primary)',
-					foreground: 'var(--text-primary)',
+				bg: {
+					primary: 'var(--bg-primary)',
+					secondary: 'var(--bg-secondary)',
+					muted: 'var(--bg-muted)',
 				},
-				secondary: {
-					DEFAULT: 'var(--theme-color-secondary)',
-					foreground: 'var(--text-primary)',
+				text: {
+					primary: 'var(--text-primary)',
+					secondary: 'var(--text-secondary)',
+					muted: 'var(--text-muted)',
 				},
 				accent: {
 					DEFAULT: 'var(--accent-primary)',
-					foreground: 'var(--text-primary)',
+					text: 'var(--accent-text)',
 				},
-				muted: {
-					DEFAULT: 'var(--bg-secondary)',
-					foreground: 'var(--theme-color-secondary)',
+				header: {
+					bg: 'var(--header-bg)',
+					text: 'var(--header-text)',
+					border: 'var(--header-border)',
+				},
+				footer: {
+					bg: 'var(--footer-bg)',
+					'bg-secondary': 'var(--footer-bg-secondary)',
+					text: 'var(--footer-text)',
+					heading: 'var(--footer-heading)',
+					link: 'var(--footer-link)',
 				},
 				border: 'var(--border)',
-				input: 'var(--border)',
-				ring: 'var(--accent-primary)',
-			}
+				shadow: 'var(--shadow)',
+				state: {
+					error: 'var(--error)',
+					warning: 'var(--warning)',
+					success: 'var(--success)',
+				}
+			},
+
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
